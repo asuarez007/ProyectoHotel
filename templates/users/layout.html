@@ -1,18 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <title>Hotel</title>
-</head>
-<body >
-    <h1>Bienvenidos al Hotel</h1>
-    {% block body %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_users.css')}}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    {% if titulo %}
+    <title>Hotel :: {{ titulo }}</title>
+    {% else %}
+    <title>Hotel</title>
+    {% endif %}
 
-    {% endblock %}
-    
+</head>
+
+<body>
+    <header class="header" id="inicio">
+        <div class="logo_nav_container">
+            <a href="/" class="logo">HOTEL</a>
+            <nav class="menu_navegacion">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/habitaciones">Habitaciones</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="cont_body">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </main>
+    <footer id="contacto">
+        <div class="footer_content">
+            <div class="contact_us">
+                <h2 class="brand">Hotel</h2>
+                <p>Los mejores recuerdos empiezan aquí</p>
+            </div>
+            <div class="social_media">
+                <a href="./" class="social_media_icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social_media_icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social_media_icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+
+    <!-- <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script> -->
+
+
 </body>
+
 </html>

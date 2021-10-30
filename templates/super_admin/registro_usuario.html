@@ -1,0 +1,31 @@
+{% extends "super_admin/s_layout_sadmin.html"%}
+
+{% block body%}
+
+<div class="container_form_box container_form_box_s">
+    <form action="/registro_usuario" method="post" class="form_box form_box_s">
+        <h1 class="title_form">Registro usuarios</h1>
+        <input class="input_form" type="text" name="usuario" id="usuario" placeholder="Ingrese usuario">
+        <input class="input_form" type="password" name="password" id="password" placeholder="Ingrese contraseña">
+        <input class="input_form" type="text" name="nombre" id="nombre" placeholder="Ingrese nombre">
+        <input class="input_form" type="text" name="apellido" id="apellido" placeholder="Ingrese apellido">
+        <input class="input_form" type="text" name="direccion" id="direccion" placeholder="Ingrese direccion">
+        <input class="input_form" type="phone" name="telefono" id="telefono" placeholder="Ingrese teléfono">
+        <input class="input_form" type="text" name="tipo_usuario" id="tipo_usuario"
+            placeholder="Ingrese el tipo de usuario">
+        <input class="btn_form btn_form_s" type="submit" value="Registrar usuario">
+    </form>
+
+    <div class="container_flash">
+        <h1 class="title_form">Alertas</h1>
+        {%for message in get_flashed_messages()%}
+        <div>
+            <ul>
+                <li>{{message}}</li>
+            </ul>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{% endblock %}

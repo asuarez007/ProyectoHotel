@@ -1,0 +1,123 @@
+/* ---------------->Form_Box<---------------------- */
+.container_form_box{
+    height: 75vh;
+    background-image: linear-gradient(to top, rgba(161, 140, 209, 0.5) 0%, rgba(251, 194, 235, 0.5) 100%), url(../img/img_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    padding: 20px;
+
+}
+.form_box{
+    width: 40%;
+    max-width: 400px;
+    display: grid;
+    background: #7258b5;
+    gap: 1em;
+    grid-auto-columns: 100%;
+    margin: auto;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.form_box p{
+    text-align: center;
+    color: white;
+}
+
+.form_box p a{
+    color: white;
+    text-decoration: underline;
+}
+
+.title_form{
+    font-family: inherit;
+    text-align: center;
+    color: white;
+}
+
+.input_form{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #9f8ad0;
+}
+
+.btn_form{
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #c8b5f4;
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+
+}
+
+/* ---------------->Contactanos<---------------------- */
+.section_contactanos{
+    height: 75vh;
+    background-image: linear-gradient(to top, rgba(161, 140, 209, 0.5) 0%, rgba(251, 194, 235, 0.5) 100%), url(../images/img_header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+}
+
+.container_contactanos{
+    width: 60%;
+    max-width: 600px;
+    display: flex;
+    flex-flow: row wrap;
+    background: #7258b5;
+    gap: 1em;
+    /* grid-auto-columns: 100%; */
+    margin: auto;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+.box_contactanos_1{
+    width: 60%;
+    max-width: 340px;
+    padding: 0.1px;
+    background-color: #c8b5f4;
+}
+
+.box_contactanos_2{
+    width: 30%;
+    max-width: 220px;
+
+}
+/* ---------------->Estilos para Super admin<---------------------- */
+.container_form_box_s{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(54, 71, 170, 0.5) 0%, rgba(120, 194, 236, 0.5) 100%), url(../img/img_header.jpg);
+    padding-top: 80px;
+}
+
+.form_box_s{
+    background-color: #0a2558;
+    width: 60%;
+    max-width: 700px;
+}
+
+.btn_form_s{
+    background-color: steelblue;
+}
+
+.container_flash{
+    background-color: #0a2558;
+    color: white;
+    border-radius: 7px;
+    padding: 2rem;
+    width: 20%;
+    margin: auto;
+}

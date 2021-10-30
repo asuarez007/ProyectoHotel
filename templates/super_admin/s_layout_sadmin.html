@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Super Admin Page</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_users.css')}}">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo_name">Super Admin</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/registro_usuario" class="active">
+                    <i class='bx bx-user-plus'></i></i>
+                    <span class="links_name">Crear usuario</span>
+                </a>
+            </li>
+            <li>
+                <a href="/modificar_usuario">
+                    <i class='bx bxs-user-detail'></i></box-icon></i>
+                    <span class="links_name">Modificar usuario</span>
+                </a>
+            </li>
+            <li>
+                <a href="/eliminar_usuario">
+                    <i class='bx bxs-user-x'></i></i>
+                    <span class="links_name">Eliminar usuario</span>
+                </a>
+            </li>
+            <li>
+                <a href="/s_gestion_habitaciones">
+                    <i class='bx bxs-home'></i></box-icon></i>
+                    <span class="links_name">Modificar Habitaciones</span>
+                </a>
+            </li>
+            <li class="log_out">
+                <a href="/login_s">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="../static/img/Logo.png" alt="">
+                <span class="admin_name">Super Admin</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+
+        {% block body %}
+
+        {% endblock %}
+
+    </section>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+    </script>
+
+</body>
+
+</html>

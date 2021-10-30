@@ -1,0 +1,74 @@
+{% extends "users/layout.html"%}
+
+{% block body%}
+<div class="intro">
+    <div class="contenedor_intro">
+        <h1 class="titulo">Convertimos tus sueños en realidad</h1>
+        <p class="copy">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    </div>
+</div>
+<section class="services_contenedor" id="servicio">
+    <h2 class="subtitulo">Nuestro servicio</h2>
+    <div class="contenedor_servicio">
+        <img src="{{url_for('static', filename='img/hotel_1.svg')}}" alt="">
+        <div class="checklist_servicio">
+            <div class="service">
+                <h3 class="n_service"><span class="number">1</span>Hotel</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minus voluptatum voluptates nesciunt a, cumque reprehenderit
+                    repellendus maiores nihil cum dolore neque consequatur sequi
+                    veniam iusto iste incidunt, amet quidem optio!</p>
+            </div>
+            <div class="service">
+                <h3 class="n_service"><span class="number">2</span>Hotel</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minus voluptatum voluptates nesciunt a, cumque reprehenderit
+                    repellendus maiores nihil cum dolore neque consequatur sequi
+                    veniam iusto iste incidunt, amet quidem optio!</p>
+            </div>
+            <div class="service">
+                <h3 class="n_service"><span class="number">3</span>Hotel</h3>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minus voluptatum voluptates nesciunt a, cumque reprehenderit
+                    repellendus maiores nihil cum dolore neque consequatur sequi
+                    veniam iusto iste incidunt, amet quidem optio!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery" id="portafolio">
+    <div class="contenedor">
+        <h2 class="subtitulo">Galeria</h2>
+        <div class="contenedor_galeria">
+            <img src="{{url_for('static', filename='img/uno.jpg')}}" alt="" class="img_galeria">
+            <img src="{{url_for('static', filename='img/dos.jpg')}}" alt="" class="img_galeria">
+            <img src="{{url_for('static', filename='img/tres.jpg')}}" alt="" class="img_galeria">
+            <img src="{{url_for('static', filename='img/cuatro.jpg')}}" alt="" class="img_galeria">
+            <img src="{{url_for('static', filename='img/cinco.jpg')}}" alt="" class="img_galeria">
+            <img src="{{url_for('static', filename='img/seis.jpg')}}" alt="" class="img_galeria">
+        </div>
+    </div>
+</section>
+<section class="imagen_light">
+    <img src="{{url_for('static', filename='img/bx-x.svg')}}" alt="" class="close">
+    <img src="{{url_for('static', filename='img/img_header1.jpg')}}" alt="" class="agregar_imagen">
+</section>
+<section class="contenedor" id="expertos">
+    <h2 class="subtitulo">Expertos en:</h2>
+    <section class="experts">
+        <div class="cont_expert">
+            <img src="{{url_for('static', filename='img/descanso.svg')}}" alt="">
+            <h3 class="n_experts">Descanso</h3>
+        </div>
+        <div class="cont_expert">
+            <img src="{{url_for('static', filename='img/Chef.svg')}}" alt="">
+            <h3 class="n_experts">Alimentación</h3>
+        </div>
+        <div class="cont_expert">
+            <img src="{{url_for('static', filename='img/diversion.svg')}}" alt="">
+            <h3 class="n_experts">Entretenimiento</h3>
+        </div>
+    </section>
+
+</section>
+{% endblock %}

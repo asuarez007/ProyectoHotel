@@ -1,0 +1,22 @@
+{% extends "super_admin/s_layout_sadmin.html"%}
+{% block body%}
+
+<div class="container_form_box container_form_box_s">
+    <form action="/eliminar_usuario" method="post" class="form_box form_box_s">
+        <h1 class="title_form">Eliminar usuarios</h1>
+        <input class="input_form" type="text" name="usuario" id="usuario" placeholder="Ingrese usuario">
+        <input class="btn_form btn_form_s" type="submit" value="Eliminar">
+    </form>
+
+    <div class="container_flash">
+        <h1 class="title_form">Alertas</h1>
+        {%for message in get_flashed_messages()%}
+        <div>
+            <ul>
+                <li>{{message}}</li>
+            </ul>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}

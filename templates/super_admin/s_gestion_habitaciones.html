@@ -1,5 +1,14 @@
-{% extends "super_admin/layout_sadmin.html"%}
+{% extends "super_admin/s_layout_sadmin.html"%}
 
 {% block body%}
-    <h1>Gestion Habitaciones</h1>
+{%for message in get_flashed_messages()%}
+<div>{{message}}</div>
+{%endfor%}
+
+<div class="container_form_box container_form_box_s">
+    <form action="" method="post" class="form_box form_box_s">
+        <h1 class="title_form">Gestion de Habitaciones</h1>
+        <input class="btn_form btn_form_s" type="submit" value="Actualizar">
+    </form>
+</div>
 {% endblock %}
